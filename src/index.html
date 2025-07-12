@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header">
+        <h1>Employee Directory</h1>
+        <div class="search-filter">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or email"
+          />
+          <button id="filterBtn" class="gray-btn">Filter</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Controls -->
+    <div class="top-bar">
+      <div class="sort-show">
+        <label for="sortSelect">Sort:</label>
+        <select id="sortSelect">
+          <option>--Select--</option>
+          <!-- Sorting options can be added dynamically -->
+        </select>
+        <label for="showCount">Show:</label>
+        <select id="showCount">
+          <option>10</option>
+          <option>5</option>
+          <option>15</option>
+        </select>
+      </div>
+      <button id="addBtn" class="green-btn">Add Employee</button>
+    </div>
+
+    <!-- Main Layout with Filter Sidebar -->
+    <div class="main-wrapper">
+      <!-- Left: Cards and Form -->
+      <main id="mainContent">
+        <div id="formContainer"></div>
+        <div class="card-container" id="employeeCards"></div>
+      </main>
+
+      <!-- Right: Filter Sidebar -->
+      <aside id="filterSidebar">
+        <h3>Filter Employees</h3>
+
+        <label for="filterName">First Name:</label>
+        <input type="text" id="filterName" placeholder="e.g. Alice" />
+
+        <label for="filterDepartment">Department:</label>
+        <input type="text" id="filterDepartment" placeholder="e.g. HR" />
+
+        <label for="filterRole">Role:</label>
+        <input type="text" id="filterRole" placeholder="e.g. Manager" />
+
+        <div class="filter-actions">
+          <button id="applyFilterBtn" class="gray-btn">Apply</button>
+          <button id="resetFilterBtn" class="gray-btn">Reset</button>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <p>© 2025 Employee Directory App. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="index.mjs"></script>
+  </body>
+</html>
